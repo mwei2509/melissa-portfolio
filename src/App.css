@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Montserrat";
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Navigation*/
+.navigation{
+  /*background: #eee;*/
+  position: relative;
+  z-index: 100;
+}
+
+.navigation > ul{
+  position: fixed;
+  top: 0;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+#logo{
+  /*float: left;
+  font-family: "Playfair Display";
+  font-weight: 900;
+  font-size: 20px;
+  text-align: left;
+  align-self: center;
+  flex: auto;*/
+  /*font-family: "Lobster";
+  font-size: 30px;
+  height:30px;*/
+  border-bottom: 10px solid #fff;
+}
+
+.navigation > ul > li{
+  margin: 0;
+  flex: auto;
+  display: inline-block;
+  padding: 10px;
+  border-top: 10px solid #fff;
+  /*border: 1px solid #000;*/
+}
+.menu-item{
+  border-bottom: 0px solid #eee;
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 0px !important;
+  transition: all .3s ease 0s;
+  margin: 0;
+  flex: auto;
+}
+.menu-item:hover{
+  border-bottom: 15px solid #eee;
+  /*border: 1px solid #000;*/
+}
+
+.blue:hover{
+  border-bottom: 15px solid #03a9f4;
+}
+
+.yellow:hover{
+  border-bottom: 15px solid #ffeb3b;
+}
+
+.green:hover{
+  border-bottom: 15px solid #4caf50;
+}
+
+@media all and (max-width: 600px) {
+  .navigation > ul {
+    flex-direction: column
+  }
+
+  .navigation > ul > li{
+    width: 100%;
+  }
+}
+
+/*main sections*/
+.division{
+  margin: 0;
+  padding: 0;
+  /*padding-top: 30px;*/
+}
+
+.section{
+  /*background: #ff0000;*/
+  /*padding-top: 70px;*/
+  margin: 0 1%;
+}
+
+.section h1, .project h1 {
+  font-size: 36px;
+  padding: 0;
+  margin: 0px 1%;
+}
+
+.section h2, .project h2{
+  font-size: 30px;
+  padding: 0;
+  margin: 10px 1%;
+}
+
+.section p, .project p{
+  margin: 15px 1%;
+}
+
+.yellow-gradient{
+  background: linear-gradient(180deg, rgba(151,203,191,1), rgba(244,214,94,1));
+}
+
+.peach-gradient{
+  /*background: linear-gradient(180deg, rgba(255,255,255,1), rgba(151,203,191,.7))*/
+  /*background: linear-gradient(180deg, rgba(11,142,150,1), rgba(151,203,191,1))*/
+  /*background: linear-gradient(130deg, #F8E8E4, #FBFBEC);*/
+  background: linear-gradient(180deg, #FFF, #F8E8E4);
+}
+
+.mint-gradient{
+  background: linear-gradient(180deg, #FFF, rgba(151,203,191,.5))
+}
+
+.green-gradient{
+  background: linear-gradient(180deg, rgba(255,255,255,1))
+}
+
+.black-gradient{
+  background: #000;
+  color: #fff;
+}
+
+/*project list */
+
+.project-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+/*each project*/
+
+.single-project{
+  background: #eee;
+  position: relative;
+  width: 23%;
+  margin: auto;
+  margin: 1%;
+  padding-bottom: 23%;
+  /*border-radius: 20px;*/
+}
+
+.single-project:hover{
+  background: #eee;
+  transition: all .3s ease 0s;
+}
+
+@media all and (max-width: 600px) {
+  .project-list{
+    flex-direction: column;
+  }
+
+  .single-project{
+    width: 98%;
+  }
+}
+
+.project-main{
+  display: flex;
+  overflow: hidden;
+  filter: grayscale(50%);
+  /*filter: grayscale(100%) contrast(110%);*/
+  /*height: 100%;
+  width: auto;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: all .5s ease 0s;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  /*border-radius: 20px;*/
+  overflow: hidden;
+}
+
+.project-main:hover{
+  filter: grayscale(0%) contrast(120%);
+  transition: all .5s ease 0s;
+  /*border-radius: 20px;*/
+}
+
+.project-meta{
+  align-self: flex-end;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  width: 100%;
+  /*height: 50%;*/
+  height: 100%;
+  top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  transition: all .3s ease 0s;
+  position: relative;
+}
+
+.project-main:hover > .project-meta{
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  top: 0px;
+  transition: all .3s ease 0s;
+}
+
+.project-meta h4{
+  color: #fff;
+  font-size: 26px;
+  font-family: "Lobster";
+  margin: 0;
+  padding: 10;
+}
+
+.project-meta p{
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 10;
+}
+
+.info, .links{
+  text-align: center;
+  text-shadow: 2px 2px 9px #000;
+  /*width: 70%;*/
+}
+
+.info p{
+  font-size: 20px;
+}
+
+/*
+
+.links{
+  margin:30px;
+}*/
+
+a.button{
+  background: #03a9f4;
+  color: #fff;
+  font-size: 12px;
+  border: 0;
+  outline: 0;
+  margin-right: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  transition: all .5s ease 0s;
+}
+
+a.social{
+  margin: 5px;
+  font-size: 40px;
+}
+
+a.button:hover {
+  background: #aaa;
+  color: #fff;
+  font-size: 12px;
+  border: 0;
+  outline: 0;
+  margin-right: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  transition: all .5s ease 0s;
+}
+
+
+/*project page*/
+.parallax-container{
+  padding-top: 60px;
+  background-position: top;
+  position: relative;
+}
+.parallax-inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parallax-inner h1{
+  font-family: "Lobster";
+  text-shadow: 3px 3px 10px rgba(0,0,0,1);
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.parallax-inner p{
+  padding: 0 70px;
+  margin-top: 0;
+  font-family: "Montserrat";
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 3px 3px 10px rgba(0,0,0,1);
+}
+
+.project-title{
+  /*text-align: center;*/
+  border-bottom: 1px dashed #000;
+  /*text-decoration: underline;*/
+  font-family: "Lobster";
+  font-size: 60px !important;
+  line-height: 55px;
+}
+
+.project{
+  margin: 0 1%;
+  display: flex;
+}
+
+.project-left{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /*background: #ff0000;*/
+  /*border: 1px solid #000;*/
+}
+
+.project-right{
+  /*background: #000;*/
+  /*border: 1px solid #000;*/
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.feature-group{
+  display: flex;
+}
+
+.feature-desc{
+  width: 50%;
+  padding-right: 15px;
+  color: #888;
+}
+.feature-img{
+  width: 50%;
+  overflow: hidden;
+}
+
+.feature-img img{
+  border-radius: 10px;
+}

@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 
 class About extends Component {
-  constructor(){
-    super()
-  }
-
   render(){
     return(
-      <div>
-        
+      <div style={{height: 900}}>
+        <p>GITHUB LINK</p>
+        <p>GITHUB LINK</p>
       </div>
     )
   }

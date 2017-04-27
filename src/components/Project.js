@@ -1,31 +1,33 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import { goToAnchor } from 'react-scrollable-anchor'
 
 class Project extends Component {
-  constructor(){
-    super()
-  }
 
+  handleClick(){
+    this.props.history.push(this.props.project.path)
+    goToAnchor('single')
+  }
   render(){
     const {project} = this.props
 
     const projectStyle={
-      background: `url(${project.mainphoto})`,
+      background: `url(${project.thumbnail})`,
       backgroundSize: "cover",
-      width: "auto",
-      height: "100%"
+      backgroundPosition: "center"
+      // borderRadius: 20
     }
     return(
-      <div className="project-main" style={projectStyle}>
+      <div onClick={this.handleClick.bind(this)} className="project-main" style={projectStyle}>
         <div className="project-meta">
-          <h4>{project.name}</h4>
-          <p>{project.about}</p>
+          <div className="info">
+            <h4><Link to={project.path}>{project.name}</Link></h4>
+            <p>{project.about.substring(0,70)+"..."}</p>
+          </div>
           <div className="links">
-            <button>
-              Demo
-            </button>
-            <button>
-              View on Github
-            </button>
+            <a className="button">
+              View Details
+            </a>
           </div>
         </div>
       </div>
