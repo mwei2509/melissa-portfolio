@@ -1,4 +1,3 @@
-
 export const ProjectData = [
   { path: "/",
     exact: true,
@@ -47,6 +46,7 @@ export const ProjectData = [
     }]
   },
   { path: "/passanote",
+
     name: "Pass a Note",
     github: "https://github.com/mwei2509/pass-a-note",
     demo: "http://frozen-oasis-62460.herokuapp.com",

@@ -11,6 +11,18 @@ class Project extends Component {
   render(){
     const {project} = this.props
 
+    const projDiv = <div className="project-meta">
+      <div className="info">
+        <h4><Link to={project.path}>{project.name}</Link></h4>
+        <p>{project.about.substring(0,70)+"..."}</p>
+      </div>
+      <div className="links">
+        <a className="button">
+          View Details
+        </a>
+      </div>
+    </div>
+
     const projectStyle={
       background: `url(${project.thumbnail})`,
       backgroundSize: "cover",
@@ -19,17 +31,7 @@ class Project extends Component {
     }
     return(
       <div onClick={this.handleClick.bind(this)} className="project-main" style={projectStyle}>
-        <div className="project-meta">
-          <div className="info">
-            <h4><Link to={project.path}>{project.name}</Link></h4>
-            <p>{project.about.substring(0,70)+"..."}</p>
-          </div>
-          <div className="links">
-            <a className="button">
-              View Details
-            </a>
-          </div>
-        </div>
+        {projDiv}
       </div>
     )
   }

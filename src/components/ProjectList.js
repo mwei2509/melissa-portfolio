@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {ProjectData} from '../content/projectdata'
 import Project from './Project'
+import FontAwesome from 'react-fontawesome'
+import { goToAnchor } from 'react-scrollable-anchor'
 
 class ProjectList extends Component {
 
